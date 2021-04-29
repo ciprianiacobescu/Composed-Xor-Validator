@@ -93,4 +93,7 @@ Wait for the node to sync and then finish the Validator configuration
 You can nominate me on XOR at `5FYvE5WvXXKsgMGYZgf1AtFQJPFApcVjakBExzP8ymuLEapF`
 
 
+# Work of others
+Don't find it clear enought?! Check these repos..
 
+https://github.com/ama31337/sora-tips
