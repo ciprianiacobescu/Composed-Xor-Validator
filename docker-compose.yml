@@ -42,7 +42,7 @@ services:
     environment:
       - WS_URL=ws://${ZeIP}:${ZeWS:-9944}
     ports:
-      - 10.147.20.103:${ZePui:-28080}:80
+      - ${ZeIP}:${ZePui:-28080}:80
     restart: unless-stopped
 
 networks:
