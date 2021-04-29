@@ -1,0 +1,53 @@
+version: '3.4'
+
+# create a .env file and add XOR_NODE_NAME=YourNodeNAME     ZeIP=10.x.x.x
+#
+# create a zerotier network, install zerotier on node, use that IP
+
+services:
+  xor-node:
+    image: sora2/substrate:${TAG_XOR:-1.0.1}
+    container_name: xor-testnode-node-1
+    hostname: xor-node
+    command: "--name ${XOR_NODE_NAME:-0Cipriani/Xor2TC} --chain ${XOR_CHAIN_NAME:-main} --validator   --base-path /chain    --unsafe-ws-external --unsafe-rpc-external --rpc-methods=Unsafe --rpc-cors all --prometheus-external  --discover-local --telemetry-url  'wss://telemetry.polkadot.io/submit/ 0'" 
+    #user: "${UID_GID}"
+    user: "10000:10000"
+    #user: "0:0"
+    networks:
+      xornet:
+        ipv4_address: 10.9.8.7
+    dns:
+      - 8.8.8.8
+      - 9.9.9.9
+      - 1.1.1.1
+    expose:
+      - 9944
+      - 9933
+    ports:
+       - ${ZeIP}:${ZeRPC:-9933}:9933
+       - ${ZeIP}:${ZeWS:-9944}:9944
+       - 30333:30333/tcp
+       - 30333:30333/udp
+       - ${ZeIP}:${ZePrometeus:-9615}:9615
+    volumes:
+      - ./chain/:/chain/
+    restart: unless-stopped
+    
+  polkaui:
+    image: jacogr/polkadot-js-apps:latest
+    container_name: polkaui-node-1
+    networks:
+      xornet:
+        ipv4_address: 10.9.8.8
+    environment:
+      - WS_URL=ws://${ZeIP}:${ZeWS:-9944}
+    ports:
+      - 10.147.20.103:${ZePui:-28080}:80
+    restart: unless-stopped
+
+networks:
+  xornet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.9.8.0/24

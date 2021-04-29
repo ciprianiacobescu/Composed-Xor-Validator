@@ -1,16 +1,26 @@
 # Composed-Xor-Validator
 A docker compose setup for the XOR validator node with its own polka ui.
 
+It is assumed you already installed: docker, docker-compose, git, nano packages. 
+
 # Install Zero tier on node
 
 Create a network in https://my.zerotier.com/
+
+![Zcreation](/images/zetorier_network_creation.png" "Zcreation")
+
+We'll assume you have chose the 10.147.17.* 
 
 Install the VPN.
 https://www.zerotier.com/download/
 
 Join the network you've created. (Read the THREE steps described on the download page)
 
-Check the IP of your node in the central panel ^^. 
+Aprove the node as a member from Zerotier Central.
+
+Change the IP of your XOR node in the central panel to 10.147.17.101. 
+
+![Zedit](/images/zetorier_network_creation2.png" "Zedit")
 
 ## Install Zerotier on your PC 
 
@@ -32,7 +42,7 @@ Then
 
 `nano .env`
 
-Add the line `ZeIp=1x.1x.1x.1x` , where 1x.1x.1x.1x is the ip you saw in Zerotier Central.  
+Add the line `ZeIp=10.147.17.101` , where 10.147.17.101 is the ip you saw in Zerotier Central.  
 Add the line `XOR_NODE_NAME=YourXORnamu` 
 
 ## Pulling the images
@@ -60,6 +70,7 @@ Terminal: ``docker-compose logs -f``
 
 # Use the UI to see the beast!
 
+http://10.147.17.101:28080
 
 
 
