@@ -45,7 +45,7 @@ Then
 
 `nano .env`
 
-Add the line `ZeIp=10.147.17.101` , where 10.147.17.101 is the ip you saw in Zerotier Central.  
+Add the line `ZeIP=10.147.17.101` , where 10.147.17.101 is the ip you saw in Zerotier Central.  
 Add the line `XOR_NODE_NAME=YourXORnamu` 
 
 ## Pulling the images
