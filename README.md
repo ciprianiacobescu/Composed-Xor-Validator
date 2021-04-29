@@ -45,6 +45,24 @@ Terminal:
 Terminal:
 ``docker-compose config``
 
+## Starting the beast
+
+Terminal: ``docker-compose up -d``
+
+## Stoping the beast
+
+Terminal: ``docker-compose stop``
+
+## Log binging
+
+Terminal: ``docker-compose logs -f``
+
+
+# Use the UI to see the beast!
+
+
+
+
 # Sponsor me 
 
 You can nominate me on XOR at 5FYvE5WvXXKsgMGYZgf1AtFQJPFApcVjakBExzP8ymuLEapF
