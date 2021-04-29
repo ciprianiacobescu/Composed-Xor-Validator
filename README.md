@@ -35,8 +35,11 @@ Run in terminal
 Then 
 
 `cd Composed-Xor-Validator`
+
 `mkdir -m777 -v chain`
+
 `sudo chown -R 10000:10000 ./chain`
+
 
 ## Create a .env file
 
