@@ -87,7 +87,7 @@ Wait for the node to sync and then finish the Validator configuration
 
 # Sponsor me 
 
-You can nominate me on XOR at 5FYvE5WvXXKsgMGYZgf1AtFQJPFApcVjakBExzP8ymuLEapF
+You can nominate me on XOR at `5FYvE5WvXXKsgMGYZgf1AtFQJPFApcVjakBExzP8ymuLEapF`
 
 
 
