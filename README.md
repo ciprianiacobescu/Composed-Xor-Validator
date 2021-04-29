@@ -7,7 +7,7 @@ It is assumed you already installed: docker, docker-compose, git, nano packages.
 
 Create a network in https://my.zerotier.com/
 
-![Zcreation](/images/zetorier_network_creation.png" "Zcreation")
+![Zcreation](/images/zetorier_network_creation.png "Zcreation")
 
 We'll assume you have chose the 10.147.17.* 
 
@@ -20,7 +20,7 @@ Aprove the node as a member from Zerotier Central.
 
 Change the IP of your XOR node in the central panel to 10.147.17.101. 
 
-![Zedit](/images/zetorier_network_creation2.png" "Zedit")
+![Zedit](/images/zetorier_network_creation2.png "Zedit")
 
 ## Install Zerotier on your PC 
 
@@ -72,10 +72,22 @@ Terminal: ``docker-compose logs -f``
 
 http://10.147.17.101:28080
 
+## Set the custom endpoint 
+![CustomEndpoint](/images/xor_node_custom_endpoint.png "CustomEndpoint")
 
+## Rotate key using UI
+
+Xor key roation si very simple with the polkaui.
+
+![RotateKeys](/images/xor_rpc_rotate_keys.png "RotateKeys")
+
+# Next ...
+
+Wait for the node to sync and then finish the Validator configuration
 
 # Sponsor me 
 
 You can nominate me on XOR at 5FYvE5WvXXKsgMGYZgf1AtFQJPFApcVjakBExzP8ymuLEapF
+
 
 
