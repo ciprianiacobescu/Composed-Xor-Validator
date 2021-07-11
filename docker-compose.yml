@@ -6,10 +6,10 @@ version: '3.4'
 
 services:
   xor-node:
-    image: sora2/substrate:${TAG_XOR:-1.0.1}
+    image: sora2/substrate:${TAG_XOR:-1.0.7}
     container_name: xor-testnode-node-1
     hostname: xor-node
-    command: "--name ${XOR_NODE_NAME:-0Cipriani/Xor2TC} --chain ${XOR_CHAIN_NAME:-main} --validator   --base-path /chain    --unsafe-ws-external --unsafe-rpc-external --rpc-methods=Unsafe --rpc-cors all --prometheus-external  --discover-local --telemetry-url  'wss://telemetry.polkadot.io/submit/ 0'" 
+    command: "--name ${XOR_NODE_NAME:-0Cipriani/Xor2TC} --chain ${XOR_CHAIN_NAME:-main} --validator  --ipfs-server --kademlia-disjoint-query-paths  --base-path /chain    --unsafe-ws-external --unsafe-rpc-external --rpc-methods=Unsafe --rpc-cors all --prometheus-external  --telemetry-url  'wss://telemetry.polkadot.io/submit/ 0'" 
     #user: "${UID_GID}"
     user: "10000:10000"
     #user: "0:0"
